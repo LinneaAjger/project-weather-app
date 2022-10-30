@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+html {
+    height:100%; 
+    min-height:100%;
+}
 
 body {
     margin: 0;
+    height:100%; 
+    min-height:100%;
 }
 
 h1 {
     font-weight:bold;
-    font-size: 30px;
+    font-size: 34px;
 }
 .header h3 {
     font-weight: 400;
@@ -19,11 +25,10 @@ h3 {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
-    padding: 10%;
-
+    padding: 10% 14%;
+    min-height:100%;
 }
 
 img {
@@ -31,12 +36,16 @@ img {
     padding-top: 40px;
 }
 
-  .forecast-section {
+.forecast-section {
     display: flex;
     justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    margin-bottom: -7px;
+}
+.five-days-forecast > :not(:last-child) {
     border-bottom: 2px dotted;
-    display: flex;
-    justify-content: space-between;
 }
 
 .container-cloudy{
@@ -52,14 +61,55 @@ img {
     color: #2A5510;
 }
 
+.search-widget {
+    margin-top: 10%;
+}
+
+
+input[type=text] {
+    padding: 5px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: #ffffff00;
+    width: 100%;
+}
+
+.search-field {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ffffff7a;
+}
+
+button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    background-color: #ffffff00;
+}
+
+.search-icon {
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+}
+
 
 @media (min-width: 667px) {
     
-    .container{
+    .container {
         font-size: 24px;
-        padding: 15%;
-        justify-content: space-evenly;
+        padding: 5% 15%;
+        justify-content: flex-start;
     }
+    .search-widget {
+        margin-top: 10%;
+    }
+  
 
     img {
         width: 152px;
@@ -68,19 +118,82 @@ img {
 
     h1 {
         font-weight:bold;
-        font-size: 30px;
+        font-size: 50px;
+    }
+    .forecast-section {
+        height: 75px;
     }
 }
 @media (min-width: 1024px) {
+
+    .container {
+        padding: 15%;
+        justify-content: space-evenly;
+    }
+
+    .today {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 100px 20px;    
+
+    }
+
+    .forecast {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 30%;
+        justify-content: space-between;
+        padding: 100px 20px;    
+
+    }
     
     .container{
     font-size: 30px;
-    justify-content: space-between;
+    flex-direction: row;
+    padding: 0;
+}
+
+
+    .search-widget {
+        text-align: right;
+        margin-top: 0px;
+    }
+
+    .five-days-forecast {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 64%;
     }
     
     h1 {
         font-weight:bold;
-        font-size: 30px;
+        font-size: 60px;
+        margin: 0px;
     }
 
+    img {
+        margin-bottom: 20px;
+
+    }
+
+    h3 {
+        margin: 21px 0px;
+
+    }
+
+    input[type=text] {
+        font-size: 18px;
+    }
+
+    .search-field {
+        padding: 10px;
+    }
+
+    .search-icon {
+        height: 30px;
+        width: 30px;
+    }
 }

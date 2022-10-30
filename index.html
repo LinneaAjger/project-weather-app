@@ -8,20 +8,31 @@
     <title>Weather app</title>
 </head>
 <body>
-    <div id="container" class="container">
-        <div id="header" class="header" >
-            <div id="sunrise" class="sunrise"></div>
-            <div id="sunset" class="sunset"></div>
-        </div>
-        
-        <div id="weatherDescription" class="weather-description">
+    <section id="container" class="container">
+        <div class="today">
+            <div id="header" class="header" >
+                <div id="sunrise" class="sunrise"></div>
+                <div id="sunset" class="sunset"></div>
+            </div>
+            
             <div id="weatherImg" class="weather-img"></div>
+            <div id="weatherDescription" class="weather-description">
+            </div>
         </div>
-        <div id="fiveDaysForecast" class="five-days-forecast"></div>
+        <div  class="forecast">
+            <div id="fiveDaysForecast" class="five-days-forecast">
+            </div>
+            <form class="search-widget" id="searchBar">
+                <label for="search-bar"></label>
+                <div class="search-field">
+                    <input id="searchInput" type="text" placeholder="Search city">
+                    <button id="searchBtn" type="submit"><img class="search-icon" src="search-icon.png" alt="search"></button>
+                </div>
+            </form>
+        </div>
 
-
-    
-    </div>
+        
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>
